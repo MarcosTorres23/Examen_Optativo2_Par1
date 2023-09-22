@@ -8,6 +8,9 @@ package Infraestructura.Modelos;
  * @author User
  */
 public class Persona_modelo {
+
+    public Persona_modelo() {
+    }
     public int IdPersona;
     public int IdCiudad;
     public String Nombre;

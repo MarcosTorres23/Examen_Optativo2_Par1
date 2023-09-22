@@ -23,25 +23,25 @@ public class Personas {
 
         try {
             conexion.setQuerySQL(conexion.conexionDB().createStatement());
-            boolean execute = conexion.getQuerySQL().execute("INSERT INTO personas("+"'id_ciudad'," +"'id_ciudad', "+
-                    "'nombre', " +
-                    "'apellido', " +
-                    "'tipo_documento', " +
-                    "'nro_documento', " +
-                    "'direccion'," +
-                    "'celular', " +
-                    "'email', " +
-                    "'estado') " +
-                    "values('" +
-                    persona.IdCiudad +"','" +
-                    persona.Nombre + "', '" +
-                    persona.Apellido + "', '" +
-                    persona.TipoDocumento + "', '" +
-                    persona.NroDocumento + "', '" +
-                    persona.Direccion + "', '" +
-                    persona.Celular + "', '" +
-                    persona.Email + "', '" +
-                    persona.estado + "'))");
+            boolean execute = conexion.getQuerySQL().execute("INSERT INTO personas("+"'id_persona'," +"'id_ciudad', "+
+                    "nombre , " +
+                    "apellido , " +
+                    " tipo_documento , " +
+                    " nro_documento , " +
+                    " direccion ," +
+                    " celular , " +
+                    " email , " +
+                    " estado ) " +
+                    "values(" +
+                    persona.IdCiudad +" , " +
+                    persona.Nombre + " , " +
+                    persona.Apellido + ", " +
+                    persona.TipoDocumento + ", " +
+                    persona.NroDocumento + ", " +
+                    persona.Direccion + ", " +
+                    persona.Celular + ", " +
+                    persona.Email + ", " +
+                    persona.estado + ");");
             conexion.conexionDB().close();
             return "La persona " + persona.Nombre + " fue registrada exitosamente";
         } catch (SQLException e) {

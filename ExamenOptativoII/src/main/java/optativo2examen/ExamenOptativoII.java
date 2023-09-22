@@ -17,6 +17,7 @@ import Servicios.Personas_servicios;
  */
 public class ExamenOptativoII {
 
+
      public static void main(String[] args) {
         Personas_servicios personaService = new Personas_servicios("postgres", "0000", "localhost", "5432", "BaseDatos_Examen_OptativoII");
         personaService.consultarPersonaPorId(1);
@@ -33,6 +34,7 @@ public class ExamenOptativoII {
         Movimientos_servicios movimientoService =new Movimientos_servicios("postgres", "0000", "localhost", "5432", "BaseDatos_Examen_OptativoII");
         movimientoService.consultarMovimientoPorId(1);
      }
-     
+
+
      
 }
